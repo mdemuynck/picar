@@ -48,7 +48,7 @@ var echo = gpio.export(3, {
 });
 
 //set enables low
-ENRA.set(0);
-ENRV.set(0);
+ENRA.set(1);
+ENRV.set(1);
 ENLA.set(0);
 ENLV.set(0);
