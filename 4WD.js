@@ -23,7 +23,7 @@ var pins=[];
 
 var on = false;
 var led = pins.pop();
-console.print("pin: " + led);
+console.log("pin: " + led);
 var stdin = process.openStdin();
 stdin.addListener("data", function(d) {
 
