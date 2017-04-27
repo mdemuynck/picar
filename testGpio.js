@@ -1,3 +1,4 @@
+//Docs at https://docs.google.com/document/d/1UprUz0g9SffxB228MnM2aoSfnQMVkHSLM6B62AKVd6E/edit
 var Gpio = require('onoff').Gpio;
 var pins=[];
 //config
