@@ -36,7 +36,7 @@ var pins=[];
 
 var on = false;
 var led = pins.pop();
-console.log("pin: " + JSON.stringify(led));
+console.log("pin: " + led.gpio);
 var stdin = process.openStdin();
 stdin.addListener("data", function(d) {
 
