@@ -46,7 +46,7 @@ stdin.addListener("data", function(d) {
     }else{
        led.writeSync(0);
        led = pins.pop();
-       console.log("pin: " + JSON.stringify(led));
+       console.log("pin: " + led.gpio);
     }
     console.log("pin is on: " + on);
 
