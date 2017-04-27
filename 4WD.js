@@ -22,6 +22,8 @@ var pins=[];
   var echo = new Gpio(3, 'in');
 
 var on = false;
+var led = pins.pop();
+console.print("pin: " + led);
 var stdin = process.openStdin();
 stdin.addListener("data", function(d) {
 
