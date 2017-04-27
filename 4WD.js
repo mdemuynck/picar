@@ -1,15 +1,11 @@
-var gpio = require("gpio");
+var Gpio = require('onoff').Gpio,
+  led = new Gpio(14, 'out');
 
-
-
-
+var on = false;
 var stdin = process.openStdin();
 
 stdin.addListener("data", function(d) {
-    var pin = gpio.export(d, {
-        direction: "out"
-    });
-    pin.set(1);
-    console.log("you entered: [" +
-    d.toString().trim() + "]");
+    on = !on;
+    led.writeSync(on);
+    console.log("pin is on: " + on);
   });
