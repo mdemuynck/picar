@@ -1,5 +1,5 @@
 var Gpio = require('onoff').Gpio,
-  led = new Gpio(14, 'out');
+  led = new Gpio(2, 'out');
 
 var on = true;
 var stdin = process.openStdin();
