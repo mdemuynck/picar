@@ -9,6 +9,5 @@ led.writeSync(on);
 stdin.addListener("data", function(d) {
     on = !on;
     led.writeSync(on);
-    led.unexport();
     console.log("pin is on: " + on);
   });
