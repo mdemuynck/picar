@@ -4,10 +4,14 @@ var Gpio = require('onoff').Gpio,
 var on = true;
 var stdin = process.openStdin();
 
-led.writeSync(on);
+led.writeSync(1);
 
 stdin.addListener("data", function(d) {
     on = !on;
-    led.writeSync(on);
+    if (on){
+        led.writeSync(1);
+    }else{
+        led.writeSync(0)
+    }
     console.log("pin is on: " + on);
   });
