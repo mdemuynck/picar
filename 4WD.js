@@ -15,7 +15,7 @@ stdin.addListener("data", function(d) {
         }
         console.log("pin is on: " + on);
     }else{
-        var p = d.replace("p", "");
+        var p = d.split("p", "")[1];
         led = new Gpio(p, 'out');
         console.log("pin set to: " + p)
     }
