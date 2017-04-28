@@ -39,5 +39,11 @@ keypress(process.stdin)
 
 process.stdin.on("keypress", function(ch, key) {
     console.log('got keypress: ', key);
-
+    if (key.name == "up"){
+        IN1_RV.writeSync(1);
+        IN2_RV.writeSync(0);
+        EN_RV.writeSync(1);
+    }else{
+        EN_RV.writeSync(0);
+    }
   });
