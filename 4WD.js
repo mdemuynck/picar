@@ -1,5 +1,6 @@
 //Docs at https://docs.google.com/document/d/1UprUz0g9SffxB228MnM2aoSfnQMVkHSLM6B62AKVd6E/edit
 var Gpio = require('onoff').Gpio;
+var keypress = require('keypress');
 var pins=[];
 //config
   var EN_RV = new Gpio(14, 'out');
@@ -34,8 +35,9 @@ var pins=[];
   pins.push(trigger);
   var echo = new Gpio(3, 'in');
 
-var stdin = process.openStdin();
-stdin.addListener("data", function(d) {
-    console.log(JSON.stringify(d));
+keypress(process.stdin)
+
+process.stdin.on("keypress", function(ch, key) {
+    console.log('got keypress: ', key);
 
   });
