@@ -36,6 +36,6 @@ var pins=[];
 
 var stdin = process.openStdin();
 stdin.addListener("data", function(d) {
-    console.log(JSON.stringify(d)));
+    console.log(JSON.stringify(d));
 
   });
