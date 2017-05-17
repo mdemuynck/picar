@@ -44,10 +44,16 @@ process.stdin.on("keypress", function(ch, key) {
         IN1_RV.writeSync(1);
         IN2_RV.writeSync(0);
         EN_RV.writeSync(1);
+        IN1_RA.writeSync(1);
+        IN2_RA.writeSync(0);
+        EN_RA.writeSync(1);
     }else if (key.name == "down"){
         IN1_RV.writeSync(0);
         IN2_RV.writeSync(1);
         EN_RV.writeSync(1);
+        IN1_RA.writeSync(0);
+        IN2_RA.writeSync(1);
+        EN_RA.writeSync(1);
     }else{
         EN_RV.writeSync(0);
     }
